@@ -22,4 +22,7 @@ class point:
     
 exemple = point()
 print(exemple.changerX())
+print(exemple.changerY())
+print(exemple.afficherX())
+print(exemple.afficherY())
 print(exemple.afficherLesPoints())
