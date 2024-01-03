@@ -5,41 +5,41 @@ class livre:
         self.__nombre_de_pages = nombre_de_pages
         self.__disponible = disponible
 
-    def verification(self):
+    def __verification__(self):
         return self.__disponible
         
-    def emprunter(self):
-        if self.verification() == True:
+    def __emprunter__(self):
+        if self.__verification__() == True:
             self.__disponible = False
             print ("Le livre a été emprunté")
             return self.__disponible
         else:
             print ("Le livre est indisponible")
     
-    def rendre(self):
-        if not self.verification():
+    def __rendre__(self):
+        if not self.__verification__():
             self.__disponible = True
             print ("Le livre a été rendu")
             return self.__disponible
         else:
             print ("Le livre est déjà disponible")
     
-    def get_titre(self):
+    def __get_titre__(self):
         return self.__titre
     
-    def get_auteur(self):
+    def __get_auteur__(self):
         return self.__auteur
     
-    def get_nombre_de_pages(self):
+    def __get_nombre_de_pages__(self):
         return self.__nombre_de_pages
     
-    def set_titre(self, titre):
+    def __set_titre__(self, titre):
         self.__titre = titre
 
-    def set_auteur(self, auteur):
+    def __set_auteur__(self, auteur):
         self.__auteur = auteur
 
-    def set_nombre_de_pages(self, nombre_de_pages):
+    def __set_nombre_de_pages__(self, nombre_de_pages):
         if nombre_de_pages > 0 and nombre_de_pages == int:
             self.__nombre_de_pages = nombre_de_pages
         else:
@@ -47,6 +47,6 @@ class livre:
 
 exemple = livre("Le seigneur des anneaux", "J.R.R. Tolkien", 1000)
 
-print (exemple.verification())
-print (exemple.emprunter())
-print (exemple.rendre())
+print (exemple.__verification__())
+print (exemple.__emprunter__())
+print (exemple.__rendre__())

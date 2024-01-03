@@ -3,22 +3,22 @@ class Rectangle:
         self.__longueur = longueur
         self.__largeur = largeur
     
-    def get_longueur(self):
+    def __get_longueur__(self):
         return self.__longueur
     
-    def get_largeur(self):
+    def __get_largeur__(self):
         return self.__largeur
     
-    def set_longueur(self, longueur):
+    def __set_longueur__(self, longueur):
         self.__longueur = longueur
 
-    def set_largeur(self, largeur):
+    def __set_largeur__(self, largeur):
         self.__largeur = largeur
 
 exemple = Rectangle(10,5)
-print (exemple.get_largeur())
-print (exemple.get_longueur())
-exemple.set_largeur(20)
-exemple.set_longueur(10)
-print (exemple.get_largeur())
-print (exemple.get_longueur())
+print (exemple.__get_largeur__())
+print (exemple.__get_longueur__())
+exemple.__set_largeur__(20)
+exemple.__set_longueur__(10)
+print (exemple.__get_largeur__())
+print (exemple.__get_longueur__())
