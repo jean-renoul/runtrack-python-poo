@@ -12,17 +12,17 @@ class livre:
         if self.__verification__() == True:
             self.__disponible = False
             print ("Le livre a été emprunté")
-            return self.__disponible
         else:
             print ("Le livre est indisponible")
+        return self.__disponible
     
     def __rendre__(self):
         if not self.__verification__():
             self.__disponible = True
-            print ("Le livre a été rendu")
-            return self.__disponible
+            print ("Le livre a été rendu")            
         else:
             print ("Le livre est déjà disponible")
+        return self.__disponible
     
     def __get_titre__(self):
         return self.__titre
