@@ -20,8 +20,8 @@ class livre:
         self.__auteur = auteur
 
     def __set_nombre_de_pages__(self, nombre_de_pages):
-        if nombre_de_pages > 0 and nombre_de_pages == int:
-            self.__nombre_de_pages = nombre_de_pages
+        if nombre_de_pages > 0 and isinstance(nombre_de_pages, int):
+            self.__nombre_de_pages += nombre_de_pages
         else:
             print("Nombre de pages incorrect")
 
@@ -31,7 +31,7 @@ print (exemple.__get_auteur__())
 print (exemple.__get_nombre_de_pages__())
 exemple.__set_titre__("Le seigneur des anneaux 2")
 exemple.__set_auteur__("Cristiano Ronaldo")
-exemple.__set_nombre_de_pages__(-1)
+exemple.__set_nombre_de_pages__(10)
 print (exemple.__get_nombre_de_pages__())
 print (exemple.__get_titre__())
 print (exemple.__get_auteur__())
