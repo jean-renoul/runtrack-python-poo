@@ -30,7 +30,7 @@ class Professeur(Personne):
     def enseigner(self):
         print("Le cours va commencer")
 
-Prof1 = Professeur("Pierre", 32)
+Prof1 = Professeur("Pierre", 32,"maths")
 Eleve1 = Eleve("Jean")
 
 Eleve1.afficherAge()
