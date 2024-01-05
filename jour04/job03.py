@@ -27,7 +27,7 @@ class Parallelepipede(Rectangle):
         self.__hauteur = hauteur
 
     def volume(self):
-        return self.__hauteur * Rectangle.surface(self)
+        return self.__hauteur * self.getLongueur() * self.getLargeur()
 
 exemple = Parallelepipede(5, 10, 5)
 
